@@ -2,16 +2,20 @@
 <html lang="en">
 
 {% block content %}
-  <h2>Upload</h2>
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <input type="file" name="document">
-    <button type="submit">Upload file</button>
-  </form>
-  
-  {% for line in text %}
-    <p> {{ line }} </p>
-
-  {% endfor %}
-
+    <h1>Welcome to the txtToSpeech converter!!</h1>
+    <a>you should expect something like that:</a>
+    <br>
+    <a>----------------------</a>
+    <br>
+    <a>EmptyTranscript: the Birch canoes slid on the smooth planksTranscript: glue the sheet to the dark blue
+        backgroundTranscript: it is easy to tell the death of a well.Transcript: These days a chicken leg is a verb
+        dish.Transcript: Rice is often served in round bowls.Transcript: The juice of lemons makes find
+        punch.Transcript: The box was down beside the park truck.Transcript: the Hogs of sub shop corn and
+        garbageTranscript: 4 hours of study work fastestTranscript: a large size in stockings is hard to sell.</a>
+    <br>
+    <a>----------------------</a>
+    <br>
+    <br>
+    <h4>the output of this audio file is:</h4>
+    <p> {{ text }} </p>
 {% endblock %}
